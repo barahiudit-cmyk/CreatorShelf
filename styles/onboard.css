@@ -1,0 +1,232 @@
+/* --- CREATORSHELF ONBOARDING --- */
+.creatorshelf-onboarding-page {
+  background-color: var(--bg-color);
+  color: var(--text2);
+  min-height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Progress Header */
+.creatorshelf-onboarding-progress {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.creatorshelf-onboarding-progress::after {
+  content: "";
+  position: absolute;
+  top: 50%; left: 0; width: 100%; height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 1;
+}
+
+.creatorshelf-progress-step {
+  width: 12px;
+  height: 12px;
+  background: var(--bg-color);
+  border: 1px solid #333;
+  z-index: 2;
+  transition: all 0.4s;
+}
+
+.creatorshelf-progress-step.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  box-shadow: 0 0 10px var(--primary);
+  transform: rotate(45deg);
+}
+
+/* Step Layout */
+.creatorshelf-step-container {
+  width: 100%;
+  max-width: 800px;
+  animation: creatorshelf-step-in 0.5s ease-out forwards;
+}
+
+@keyframes creatorshelf-step-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.creatorshelf-onboarding-title {
+  font-size: calc(2rem , 4vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -2px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.creatorshelf-onboarding-desc {
+  color: var(--muted);
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 1rem;
+}
+
+/* Category Grid (Step 01) */
+.creatorshelf-category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.creatorshelf-category-card {
+  background: var(--black-fade);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 25px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+  transition: all 0.2s;
+}
+
+.creatorshelf-category-card.selected {
+  border-color: var(--primary);
+  background: rgba(239, 80, 56, 0.05);
+  color: var(--primary);
+}
+
+/* Username Input (Step 02) */
+.creatorshelf-username-wrapper {
+  background: var(--black-fade);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.creatorshelf-username-prefix {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--muted);
+  font-size: 1.2rem;
+}
+
+.creatorshelf-username-input {
+  background: transparent;
+  border: none;
+  color: var(--text2);
+  font-size: 1.2rem;
+  font-weight: 700;
+  flex: 1;
+  outline: none;
+}
+
+/* Platform Icons (Step 03) */
+.creatorshelf-platform-pill {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: transparent;
+}
+
+.creatorshelf-platform-pill.connected {
+  border-color: var(--primary);
+  background: rgba(239, 80, 56, 0.05);
+}
+
+/* Form Fields (Step 04) */
+.creatorshelf-form-field {
+  margin-bottom: 25px;
+}
+
+.creatorshelf-form-label {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: #ef5038;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.creatorshelf-form-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  color: #fff;
+  outline: none;
+}
+
+/* Success Card (Step 05) */
+.creatorshelf-success-card {
+  background: rgba(239, 80, 56, 0.03);
+  border: 1px solid var(--primary);
+  padding: 40px;
+  text-align: left;
+}
+
+.creatorshelf-summary-item {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Navigation Buttons */
+.creatorshelf-nav-actions {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.creatorshelf-btn-next {
+  /* width: 100%; */
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary);
+  color: var(--surface);
+  border: none;
+  /* height: 22px; */
+  padding: 1rem 2rem;
+  font-size: .85rem;
+  /* padding: 14px 35px; */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+  cursor: pointer;
+  clip-path: polygon(0% 0%, calc(100% - var(--creatorshelf-notch)) 0%, 100% var(--creatorshelf-notch), 100% 100%, var(--creatorshelf-notch) 100%, 0% calc(100% - var(--creatorshelf-notch)));
+  transition: transform 0.1s ease;
+}
+.creatorshelf-btn-next:hover {
+   background: transparent;
+   border: 1px solid var(--primary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+.creatorshelf-btn-skip {
+  background: transparent;
+  color: #555;
+  border: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* @media (max-width: 600px) {
+  .creatorshelf-onboarding-title {
+    font-size: 1.8rem;
+  }
+  
+  .creatorshelf-onboarding-desc {
+    font-size: 0.9rem;
+  }
+} */

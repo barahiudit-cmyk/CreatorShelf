@@ -1,0 +1,150 @@
+src/
+│
+├── app/
+│   │
+│   ├── layout.tsx
+│   ├── globals.css
+│   ├── page.tsx
+│   │
+│   ├── login/
+│   │   └── page.tsx
+│   │
+│   ├── signup/
+│   │   └── page.tsx
+│   │
+│   ├── dashboard/
+│   │   │
+│   │   ├── page.tsx
+│   │   │
+│   │   ├── analytics/
+│   │   │   └── page.tsx
+│   │   │
+│   │   ├── settings/
+│   │   │   └── page.tsx
+│   │   │
+│   │   └── portfolio/
+│   │       └── page.tsx
+│   │
+│   └── [username]/
+│       └── page.tsx
+│
+│
+├── components/
+│   │
+│   ├── landing/
+│   │   │
+│   │   ├── Navbar.tsx
+│   │   ├── Hero.tsx
+│   │   ├── Features.tsx
+│   │   ├── DemoProfile.tsx
+│   │   ├── CTA.tsx
+│   │   ├── Footer.tsx
+│   │   └── TrustedBy.tsx
+│   │
+│   │
+│   ├── auth/
+│   │   │
+│   │   ├── LoginForm.tsx
+│   │   ├── SignupForm.tsx
+│   │   ├── AuthLayout.tsx
+│   │   └── SocialLogin.tsx
+│   │
+│   │
+│   ├── dashboard/
+│   │   │
+│   │   ├── Sidebar.tsx
+│   │   ├── Topbar.tsx
+│   │   ├── StatsCard.tsx
+│   │   ├── AnalyticsChart.tsx
+│   │   ├── LatestPosts.tsx
+│   │   ├── PlatformCard.tsx
+│   │   ├── QuickActions.tsx
+│   │   ├── PortfolioPreview.tsx
+│   │   └── RefreshStatus.tsx
+│   │
+│   │
+│   ├── portfolio/
+│   │   │
+│   │   ├── PortfolioHero.tsx
+│   │   ├── PortfolioStats.tsx
+│   │   ├── GrowthGraph.tsx
+│   │   ├── ContentGrid.tsx
+│   │   ├── SocialLinks.tsx
+│   │   ├── CreatorBio.tsx
+│   │   ├── PlatformBadges.tsx
+│   │   ├── ShareProfile.tsx
+│   │   └── ContactCreator.tsx
+│   │
+│   │
+│   ├── shared/
+│   │   │
+│   │   ├── PrimaryButton.tsx
+│   │   ├── SecondaryButton.tsx
+│   │   ├── SectionTitle.tsx
+│   │   ├── Loader.tsx
+│   │   ├── EmptyState.tsx
+│   │   ├── PageHeading.tsx
+│   │   ├── ThemeToggle.tsx
+│   │   ├── Container.tsx
+│   │   └── GlassCard.tsx
+│   │
+│   │
+│   └── ui/
+│       │
+│       ├── CustomInput.tsx
+│       ├── CustomModal.tsx
+│       ├── CustomBadge.tsx
+│       ├── GradientButton.tsx
+│       ├── AnimatedCounter.tsx
+│       └── SkeletonCard.tsx
+│
+│
+├── styles/
+│   │
+│   ├── globals.css
+│   ├── landing.css
+│   ├── auth.css
+│   ├── dashboard.css
+│   ├── portfolio.css
+│   ├── buttons.css
+│   └── responsive.css
+│
+│
+├── assets/
+│   │
+│   ├── images/
+│   │   ├── creators/
+│   │   ├── logos/
+│   │   ├── mockups/
+│   │   └── backgrounds/
+│   │
+│   ├── icons/
+│   │
+│   └── fonts/
+│
+│
+├── hooks/
+│   │
+│   ├── useTheme.ts
+│   ├── useWindowSize.ts
+│   └── useScrollAnimation.ts
+│
+│
+├── lib/
+│   │
+│   ├── constants.ts
+│   ├── dummyData.ts
+│   ├── animations.ts
+│   └── utils.ts
+│
+│
+├── types/
+│   │
+│   ├── creator.ts
+│   ├── analytics.ts
+│   └── portfolio.ts
+│
+│
+└── data/
+    │
+    └── demoCreator.json

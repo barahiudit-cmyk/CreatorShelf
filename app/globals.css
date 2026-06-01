@@ -1,26 +1,50 @@
-@import "tailwindcss";
+@import 'bootstrap/dist/css/bootstrap.min.css';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #f5f1eb;
+  --surface: #ffffff;
+  --text: #0a0a0a;
+  --text2: #fff;
+  --muted: #5f5f5f;
+  --bg-color: rgb(9, 9, 9);
+  --border: #ffffff1a: --bg-color:black;
+  --black-fade: rgba(0, 0, 0, 0.588);
+  --primary: #ed4c37;
+  --primary-hover: #ff6b47;
+  --accent:#28bc5e;
+  --border: #d9d1c7;
+  --grid: rgba(0, 0, 0, 0.06);
+  --creatorshelf-notch: 14px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* .dark {
+  --bg: #070707;
+  --surface: #0f0f0f;
+  --text: #f5f5f5;
+  --text2: #0c0c0c;
+  --muted: #141414e3;
+  --border:#7777771a:
+  --bg-color: rgb(159, 88, 62);
+  --black-fade: rgba(204, 204, 204, 0.588);
+  --muted: #a1a1aa;
+  --primary: #862f1b;
+  --primary-hover: #ff7a59;
+  --border: #1d1d1d;
+  --grid: rgba(255, 255, 255, 0.05);
+}  */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Base Body Styles */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--primary);
+  color: var(--text);
+  font-family: 'Inter', -apple-system, sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
