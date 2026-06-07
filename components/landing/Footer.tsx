@@ -13,7 +13,7 @@ const Footer = () => {
                 <div className="row">
 
                     {/* Brand & Newsletter */}
-                    <div className="col-lg-5 mb-5 mb-lg-0">
+                    <div className="col-lg-5 mb-1 mb-lg-0">
                         <h2
                             className="fw-black text-white h3 mb-4"
                             style={{ letterSpacing: "-1px" }}

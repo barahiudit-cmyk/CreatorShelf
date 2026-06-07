@@ -48,10 +48,10 @@ const Navbar = () => {
           ))}
 
           <Link
-            href="/login"
+            href="/dashboard"
             className="creatorshelf-btn-notched-nav text-white text-decoration-none"
           >
-            Get Early Access
+            Dashboard
           </Link>
         </div>
 
