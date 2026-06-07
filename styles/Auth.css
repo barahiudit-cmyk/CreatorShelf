@@ -24,7 +24,7 @@
   position: absolute;
   width: 60vw;
   height: 60vw;
-  background: radial-gradient(circle, rgba(239, 80, 56, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, var(--primary-fade) 0%, transparent 70%);
   top: -10%;
   right: -10%;
   filter: blur(80px);
@@ -43,7 +43,7 @@
 .creatorshelf-auth-ray-v,
 .creatorshelf-auth-ray-h {
   position: absolute;
-  background: linear-gradient(90deg, transparent, #ef5038 50%, transparent);
+  background: linear-gradient(90deg, transparent, var(--primary) 50%, transparent);
   pointer-events: none;
   z-index: 2;
   transition: opacity 0.5s;
@@ -53,23 +53,23 @@
   width: 1px;
   height: 100%;
   top: 0;
-  background: linear-gradient(to bottom, transparent, rgba(239, 80, 56, 0.4), transparent);
-  box-shadow: 0 0 15px rgba(239, 80, 56, 0.2);
+  background: linear-gradient(to bottom, transparent, var(--primary), transparent);
+  box-shadow: 0 0 15px var(--primary);
 }
 
 .creatorshelf-auth-ray-h {
   height: 1px;
   width: 100%;
   left: 0;
-  background: linear-gradient(to right, transparent, rgba(239, 80, 56, 0.4), transparent);
-  box-shadow: 0 0 15px rgba(239, 80, 56, 0.2);
+  background: linear-gradient(to right, transparent, var(--primary), transparent);
+  box-shadow: 0 0 15px var(--primary);
 }
 
 .creatorshelf-auth-custom-cursor {
   position: absolute;
   width: 30px;
   height: 30px;
-  border: 1px solid rgba(239, 80, 56, 0.5);
+  border: 1px solid var(--primary);
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 100;
@@ -83,8 +83,8 @@
   content: "";
   width: 4px;
   height: 4px;
-  background: #ef5038;
-  box-shadow: 0 0 10px #ef5038;
+  background: var(--primary);
+  box-shadow: 0 0 10px var(--primary);
 }
 
 /* 3. Auth Card */
@@ -114,11 +114,11 @@
 
 .creatorshelf-auth-badge {
   display: inline-flex;
-  border: 1px solid rgba(239, 80, 56, 0.3);
+  border: 1px solid var(--border);
   padding: 4px 12px;
   font-family: 'JetBrains Mono', monospace;
   font-size: 10px;
-  color: #ef5038;
+  color: var(--primary);
   letter-spacing: 2px;
   margin-bottom: 30px;
 }
@@ -192,8 +192,8 @@
 .creatorshelf-auth-dot {
   width: 4px;
   height: 4px;
-  background: #ef5038;
-  box-shadow: 0 0 5px #ef5038;
+  background: var(--primary);
+  box-shadow: 0 0 5px var(--primary);
 }
 
 /* Footer Links */

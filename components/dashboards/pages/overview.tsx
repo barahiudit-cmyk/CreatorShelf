@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link'
 import { Icons } from '@/lib/icons';
 import YtStats from '../../../components/ui/dashboard-ui/yt-stats';
+import ChartWave from "@/components/ui/ChatWave";
 
 
 export default function DashboardOverview() {
@@ -12,18 +13,18 @@ export default function DashboardOverview() {
     const [isRefreshing, setIsRefreshing] = useState(false);
     const [copied, setCopied] = useState(false);
 
-   
+
 
     // Activity Flow Data
     const activities = [
         { id: 1, icon: <Icons.CircleCheck size={20} />, iconClass: 'act-green', title: 'YouTube stats synced successfully', desc: 'Subscribers: +120 • Views: +2.3K', time: '3 hours ago' },
         { id: 2, icon: <Icons.CircleCheck size={20} />, iconClass: 'act-purple', title: 'Instagram stats synced successfully', desc: 'Followers: +85 • Engagement: +1.2%', time: '5 hours ago' },
-        { id: 3, icon: <Icons.Link2 size={20} />, iconClass: 'act-blue', title: 'You copied your portfolio link', desc: 'creatorshelf.app/alexcreates', time: '1 day ago' },
+        { id: 3, icon: <Icons.Link2 size={20} />, iconClass: 'act-blue', title: 'You copied your portfolio link', desc: 'creatorshelf.app/uditcreates', time: '1 day ago' },
         { id: 4, icon: <Icons.Settings size={20} />, iconClass: 'act-orange', title: 'Profile updated', desc: 'You updated your bio and profile picture', time: '2 days ago' },
     ];
 
     const handleCopy = () => {
-        navigator.clipboard.writeText('creatorshelf.app/alexcreates');
+        navigator.clipboard.writeText('creatorshelf.app/uditcreates');
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
     };
@@ -51,18 +52,32 @@ export default function DashboardOverview() {
                     </p>
                 </div>
                 <div className="d-flex align-items-center gap-3">
-                    <Link href="/portfolios" className="creatorshelf-dashboard-overview-viewbtn">
+                    <Link href="/portfolios" className="creatorshelf-dashboard-overview-viewbtn text-decoration-none">
                         View My Page <Icons.ExternalLink size={15} />
                     </Link>
-                 
+
                 </div>
             </motion.div>
 
             {/* ===== PLATFORM CARDS ROW ===== */}
             <div className="row g-4 mb-4">
                 {[
-                    { type: 'youtube', name: 'YouTube', handle: '@UditCreator', color: 'bg-youtube', chart: 'chart-red', icon: <Icons.Play size={22} fill="#fff" /> },
-                    { type: 'instagram', name: 'Instagram', handle: '@UditCreator_ig', color: 'bg-instagram', chart: 'chart-purple', icon: <Icons.Camera size={22} /> }
+                    {
+                        type: 'youtube', name: 'YouTube', handle: '@UditCreator', color: 'bg-youtube',
+                        chart: (<ChartWave
+                            stroke="#a855f7"
+                            fill="#a855f7"
+                            path="M0 95 C40 70 80 80 120 45 C150 15 190 65 220 35 C250 15 280 25 300 12" />), icon: <Icons.Play size={22} fill="#fff" />
+                    },
+
+                    {
+                        type: 'instagram', name: 'Instagram', handle: '@UditCreator_ig', color: 'bg-instagram',
+                        chart: (<ChartWave
+                            stroke="#ef4444"
+                            fill="#ef4444"
+                            path="M0 90 C40 75 70 80 100 55 C130 30 170 60 210 35 C240 20 270 30 300 18" />), icon: <Icons.Camera size={22} />
+                    }
+
                 ].map((platform, idx) => (
                     <motion.div
                         key={platform.type}
@@ -71,8 +86,12 @@ export default function DashboardOverview() {
                         transition={{ delay: idx * 0.1 }}
                         className="col-12 col-lg-4 col-md-6"
                     >
+
                         <div className="creatorshelf-dashboard-overview-platform-card">
-                            <div className={`creatorshelf-dashboard-overview-platform-chart ${platform.chart}`}></div>
+                            {/* Chart */}
+                            <div className="creatorshelf-dashboard-overview-platform-chart">
+                                {platform.chart}
+                            </div>
                             <div className="d-flex align-items-center gap-3 mb-3 position-relative">
                                 <div className={`creatorshelf-dashboard-overview-platform-logo ${platform.color}`}>{platform.icon}</div>
                                 <div>
@@ -114,19 +133,19 @@ export default function DashboardOverview() {
                                 <Icons.RefreshCw size={14} className={isRefreshing ? 'spin' : ''} /> {isRefreshing ? 'Refreshing...' : 'Refresh now'}
                             </button>
                         </div>
-                        
-                        <YtStats/>
-                       
+
+                        <YtStats />
+
                     </div>
                 </div>
 
-                <motion.div  initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.4}}   className="col-12 col-lg-4">
+                <motion.div initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.4 }} className="col-12 col-lg-4">
                     <div className="creatorshelf-dashboard-overview-portfolio h-100">
                         <h2 className="creatorshelf-dashboard-overview-portfolio-title">Your portfolio is live 🎉</h2>
                         <p className="creatorshelf-dashboard-overview-portfolio-sub">Share your link with brands and followers.</p>
                         <div className="creatorshelf-dashboard-overview-portfolio-input">
-                            <span>creatorshelf.app/alexcreates</span>
+                            <span>creatorshelf.app/uditcreates</span>
                             <button onClick={handleCopy}>
                                 {copied ? <Icons.Check size={16} className="text-success" /> : <Icons.Copy size={16} />}
                             </button>
@@ -165,10 +184,10 @@ export default function DashboardOverview() {
                         <div className="row g-3">
                             {[1, 2, 3].map((_, i) => (
                                 <motion.div initial={{ opacity: 0, scale: 0.95 }}
-                            animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.1 }} className="col-12 col-sm-4" key={i}>
+                                    animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.1 }} className="col-12 col-sm-4" key={i}>
                                     <div className="creatorshelf-dashboard-overview-content-card">
                                         <div className="creatorshelf-dashboard-overview-content-thumb">
-                                            <img src={`https://placehold.co/300x170/111/fff?text=${activeTab}+${i + 1}`} alt="content" />
+                                            <img src={`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCxJS_y1eSgM9x6OeGI9rPkPiFtpWtXja9Lg&s?text=${activeTab}+${i + 1}`} alt="content" />
                                             <span className="creatorshelf-dashboard-overview-content-duration">12:00</span>
                                         </div>
                                         <h4 className="creatorshelf-dashboard-overview-content-title">Creative Content Title {i + 1}</h4>

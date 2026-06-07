@@ -553,7 +553,7 @@
   gap: 0.6rem;
   padding: 0.5rem 1rem;
   background: rgba(10, 10, 10, 0.88);
-  border: 1px solid rgba(237, 70, 45, 0.2);
+  border: 1px solid var(--border);
   font-family: "Chivo Mono", monospace;
   font-size: 0.75rem;
   letter-spacing: 0.12em;
@@ -781,7 +781,7 @@
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   background: #0a0a0a6b;
-  border: 1px solid #ed462d33;
+  border: 1px solid var(--border);
   gap: .6rem;
   margin: 0 auto 2rem;
   padding: .5rem 1rem;
@@ -811,11 +811,11 @@
   width: 40%;
   height: 1px;
 
-  background: #ef5038;
+  background: var(--primary);
 
   box-shadow:
-    0 0 8px #ef5038,
-    0 0 16px #ef5038;
+    0 0 8px var(--primary),
+    0 0 16px var(--primary);
 
   animation: badgeScan 2.5s linear infinite;
 }
@@ -910,7 +910,7 @@
 }
 
 .creatorshelf-connector-v {
-  background: #ed4c3726;
+  background: var(--primary-border);
   justify-content: center;
   align-items: center;
   width: 1px;
@@ -1701,7 +1701,7 @@
 
 .creatorshelf-social-avatar:hover {
   transform: translateY(-5px);
-  border-color: #ef5038;
+  border-color: var(--primary);
   z-index: 10;
 }
 
@@ -1722,20 +1722,20 @@
 /* Stats Grid */
 .creatorshelf-social-grid {
   margin-top: 100px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid var(--border);
 }
 
 .creatorshelf-social-card {
   padding: 60px 45px;
-  border-right: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
   position: relative;
   background: transparent;
   transition: background 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .creatorshelf-social-card:hover {
-  background: rgba(239, 80, 56, 0.03);
+  background: var(--primary-fade);
 }
 
 /* Card Selection Beam */
@@ -1746,7 +1746,7 @@
   left: 0;
   width: 2px;
   height: 0;
-  background: #ef5038;
+  background: var(--primary);
   transition: height 0.4s ease;
 }
 
@@ -1768,7 +1768,7 @@
   font-size: 4rem;
   font-weight: 900;
   letter-spacing: -3px;
-  color: #ffffff;
+  color: var(--text2);
   line-height: 1;
   margin-bottom: 12px;
 }
@@ -1776,7 +1776,7 @@
 .creatorshelf-social-stat-label {
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
-  color: #ef5038;
+  color: var(--primary);
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 600;
@@ -1848,7 +1848,7 @@
   position: absolute;
   width: 16px;
   height: 16px;
-  border: 1px solid #ef5038;
+  border: 1px solid var(--primary);
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 100;
@@ -1861,7 +1861,7 @@
   content: "";
   width: 2px;
   height: 2px;
-  background: #ef5038;
+  background: var(--primary);
 }
 
 /* Header Styling */
@@ -1873,7 +1873,7 @@
   padding: 4px 12px;
   font-family: 'JetBrains Mono', monospace;
   font-size: 10px;
-  color: #ef5038;
+  color: var(--primary);
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -1895,7 +1895,7 @@
 }
 
 .creatorshelf-faq-item {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--border);
   padding: 25px 20px;
   cursor: pointer;
   position: relative;
@@ -1904,7 +1904,7 @@
 
 /* Hover Box Effect from Image */
 .creatorshelf-faq-item:hover {
-  outline: 1px solid #ef5038;
+  outline: 1px solid var(--primary);
   background: rgba(239, 80, 56, 0.02);
   z-index: 20;
 }
@@ -1919,7 +1919,7 @@
 .creatorshelf-faq-number {
   font-family: 'JetBrains Mono', monospace;
   font-size: 12px;
-  color: #ef5038;
+  color: var(--primary);
   margin-right: 40px;
   font-weight: 700;
 }
@@ -1940,7 +1940,7 @@
 
 .creatorshelf-faq-item.active .creatorshelf-faq-icon {
   transform: rotate(180deg);
-  color: #ef5038;
+  color: var(--primary);
 }
 
 /* Answer Content */
@@ -2003,7 +2003,7 @@
 /* 1. Tactical Frame */
 .creatorshelf-cta-alt-frame {
   position: relative;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
   background: rgba(255, 255, 255, 0.01);
   padding: 40px;
   display: flex;
@@ -2017,7 +2017,7 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  border: 2px solid #ef5038;
+  border: 2px solid var(--primary);
   z-index: 5;
 }
 
@@ -2066,7 +2066,7 @@
 
 .creatorshelf-cta-alt-path {
   fill: none;
-  stroke: #ef5038;
+  stroke: var(--primary);
   stroke-width: 2;
   stroke-dasharray: 100, 1000;
   animation: creatorshelf-cta-scan-run 4s infinite linear;
@@ -2091,7 +2091,7 @@
 .creatorshelf-cta-alt-badge {
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
-  color: #ef5038;
+  color: var(--primary);
   letter-spacing: 3px;
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -2123,8 +2123,8 @@
   transform: translate(-50%, -50%);
   width: 4px;
   height: 4px;
-  background: #ef5038;
-  box-shadow: 0 0 10px #ef5038;
+  background: var(--primary);
+  box-shadow: 0 0 10px var(--primary);
 }
 
 /* 4. Action Button */
@@ -2134,7 +2134,7 @@
 
 .creatorshelf-cta-alt-btn {
   background: transparent;
-  border: 1px solid #ef5038;
+  border: 1px solid var(--primary);
   color: #fff;
   padding: 20px 50px;
   font-weight: 800;
@@ -2153,7 +2153,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: #ef5038;
+  background: var(--primary);
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
   z-index: -1;
 }
@@ -2254,7 +2254,7 @@
 }
 
 .creatorshelf-footer-submit {
-  background: #ef5038;
+  background: var(--primary);
   color: #fff;
   border: none;
   padding: 0 25px;
@@ -2275,7 +2275,7 @@
 .creatorshelf-footer-label {
   font-family: 'JetBrains Mono', monospace;
   font-size: 10px;
-  color: #ef5038;
+  color: var(--primary);
   letter-spacing: 2px;
   margin-bottom: 25px;
   display: block;
@@ -2345,7 +2345,7 @@
 }
 
 .creatorshelf-footer-social-icon:hover {
-  color: #ef5038;
+  color: var(--primary);
 }
 
 @media (max-width: 768px) {

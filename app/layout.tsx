@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+
 import { Geist, Geist_Mono } from "next/font/google";
 import { Inter } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";

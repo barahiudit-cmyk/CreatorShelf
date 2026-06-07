@@ -17,7 +17,11 @@ interface ParticleData {
   isNearMouse(): boolean;
 }
 
-const NoiseParticles = ({ color }: { color: string }) => {
+interface NoiseParticlesProps {
+  color?: string;
+}
+
+const NoiseParticles = ({ color }: NoiseParticlesProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   const mouse = useRef({
@@ -27,17 +31,21 @@ const NoiseParticles = ({ color }: { color: string }) => {
 
   useEffect(() => {
     const canvas = canvasRef.current;
-
     if (!canvas) return;
 
     const ctx = canvas.getContext("2d");
-
     if (!ctx) return;
+
+    // Automatically read CSS variable
+    const primaryColor =
+      color ||
+      getComputedStyle(document.documentElement)
+        .getPropertyValue("--primary")
+        .trim() ||
+      "#9e37ed";
 
     let particles: Particle[] = [];
     let animationId: number;
-
-    const particleCount = 600;
 
     class Particle implements ParticleData {
       x: number;
@@ -56,16 +64,16 @@ const NoiseParticles = ({ color }: { color: string }) => {
         this.baseX = this.x;
         this.baseY = this.y;
 
-        this.size = Math.random() * 4 + 1;
+        this.size = Math.random() * 3 + 1;
 
         this.density = Math.random() * 30 + 1;
 
         this.color =
           Math.random() > 0.5
-            ? "#ffffff11"
-            : "#33333333";
+            ? "#ffffff10"
+            : "#ffffff05";
 
-        this.activeColor = color;
+        this.activeColor = primaryColor;
       }
 
       isNearMouse() {
@@ -95,37 +103,27 @@ const NoiseParticles = ({ color }: { color: string }) => {
         const distance =
           Math.sqrt(dx * dx + dy * dy) || 1;
 
-        const forceDirectionX = dx / distance;
-        const forceDirectionY = dy / distance;
-
         const maxDistance = 100;
 
-        const force =
-          (maxDistance - distance) / maxDistance;
-
-        const directionX =
-          forceDirectionX *
-          force *
-          this.density;
-
-        const directionY =
-          forceDirectionY *
-          force *
-          this.density;
-
         if (distance < maxDistance) {
-          this.x -= directionX;
-          this.y -= directionY;
-        } else {
-          if (this.x !== this.baseX) {
-            const dx = this.x - this.baseX;
-            this.x -= dx / 10;
-          }
+          const force =
+            (maxDistance - distance) / maxDistance;
 
-          if (this.y !== this.baseY) {
-            const dy = this.y - this.baseY;
-            this.y -= dy / 10;
-          }
+          this.x -=
+            (dx / distance) *
+            force *
+            this.density;
+
+          this.y -=
+            (dy / distance) *
+            force *
+            this.density;
+        } else {
+          this.x +=
+            (this.baseX - this.x) * 0.08;
+
+          this.y +=
+            (this.baseY - this.y) * 0.08;
         }
       }
     }
@@ -136,7 +134,17 @@ const NoiseParticles = ({ color }: { color: string }) => {
 
       particles = [];
 
-      for (let i = 0; i < particleCount; i++) {
+      const particleCount =
+        Math.floor(
+          (canvas.width * canvas.height) /
+            800
+        );
+
+      for (
+        let i = 0;
+        i < particleCount;
+        i++
+      ) {1
         particles.push(new Particle());
       }
     };
@@ -150,8 +158,8 @@ const NoiseParticles = ({ color }: { color: string }) => {
       );
 
       particles.forEach((particle) => {
-        particle.draw();
         particle.update();
+        particle.draw();
       });
 
       animationId =

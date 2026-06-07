@@ -59,7 +59,7 @@ const CtaSection = () => {
                     {/* Action */}
                     <div className="creatorshelf-cta-alt-action">
 
-                        <Link href="/login" className="creatorshelf-btn-notched w-100 text-decoration-none">
+                        <Link href="/login" className="creatorshelf-btn-notched w-100 text-decoration-none" style={{background:'var(--primary)'}}>
                             Get Started Free
                         </Link>
 

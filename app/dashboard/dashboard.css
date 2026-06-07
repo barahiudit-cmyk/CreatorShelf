@@ -25,8 +25,8 @@
     --creatorshelf-notch: 8px;
 
     /* Extra colors needed for the design */
-    --portfolio-purple: #7c3aed;
-    --portfolio-purple-2: #6d28d9;
+   --secondary: #7c3aed;
+   --secondary-light: #6d28d9;
     --success-green: #22c55e;
     --instagram-purple: #a855f7;
 }
@@ -38,7 +38,7 @@
 }
 
 body {
-    background-color: var(--bg-color);
+    background-color: var(--bg-color) !important;
     color: var(--text2);
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     margin: 0;
@@ -317,14 +317,14 @@ body {
 }
 
 .creatorshelf-dashboard-overview-platform-chart {
-    position: absolute;
-    bottom: 55px;
-    right: 0;
-    width: 60%;
-    height: 110px;
-    z-index: 0;
+ z-index: 0;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    width: 60%;
+    height: 110px;
+    position: absolute;
+    bottom: 38px;
+    right: 0;
 }
 
 /* Charts */

@@ -1,11 +1,12 @@
 'use client';
 
 import React from 'react';
-// import YtStats from '@/components/ui/dashboard-ui/yt-stats';
+import YtStats from '@/components/ui/dashboard-ui/yt-stats';
 import DateSelectorProps from '@/components/ui/dashboard-ui/DatePicker'
 import { motion } from 'framer-motion';
 import { fadeInDown, fadeInLeft,scaleIn } from '@/lib/animation';
 import { Icons } from "@/lib/icons";
+
 
 
 import {
@@ -151,7 +152,7 @@ export default function AnalyticsPage() {
 
       {/* 3. STAT CARDS */}
       <div className="row g-3 mb-4">
-        {[
+        {/* {[
           { label: 'Total Followers', val: '125.4K', growth: '+12.4%', icon: <Icons.Users size={18} />, color: '#7c3aed' },
           { label: 'Total Views', val: '8.7M', growth: '+18.7%', icon: <Icons.Eye size={18} />, color: '#3b82f6' },
           { label: 'Total Engagement', val: '432.6K', growth: '+9.3%', icon: <Icons.Heart size={18} />, color: '#ed4c37' },
@@ -171,8 +172,8 @@ export default function AnalyticsPage() {
               </p>
             </div>
           </motion.div>
-        ))}
-        {/* <YtStats /> */}
+        ))} */}
+        <YtStats />
       </div>
 
       {/* 4. MAIN CHARTS ROW */}

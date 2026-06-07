@@ -18,7 +18,7 @@ const Footer = () => {
                             className="fw-black text-white h3 mb-4"
                             style={{ letterSpacing: "-1px" }}
                         >
-                            CREATOR<span style={{ color: "#ef5038" }}>SHELF</span>
+                            CREATOR<span style={{ color: "var(--primary)" }}>SHELF</span>
                         </h2>
 
                         <p

@@ -7,15 +7,24 @@
   --text2: #fff;
   --muted: #5f5f5f;
   --bg-color: rgb(9, 9, 9);
-  --border: #ffffff1a: 
-  --bg-color:black;
+  --border: rgba(255, 255, 255, 0.1);
+  --bg-color: black;
   --black-fade: rgba(0, 0, 0, 0.588);
-  --primary: #ed4c37;
+  --primary: #6c17a1;
+  --primary-border: color-mix(in srgb, var(--primary) 24%, transparent);
+  --primary-fade: color-mix(in srgb, var(--primary) 4%, transparent);
   --primary-hover: #ff6b47;
-  --accent:#28bc5e;
-  --border: #d9d1c7;
+  --accent: #28bc5e;
+  /* --border: #d9d1c7; */
   --grid: rgba(0, 0, 0, 0.06);
   --creatorshelf-notch: 14px;
+
+
+  /* Extra colors needed for the design */
+  --secondary: #7c3aed;
+  --secondary-light: #6d28d9;
+  --success-green: #22c55e;
+  --instagram-purple: #a855f7;
 }
 
 /* .dark {
@@ -49,3 +58,4 @@ body {
   margin: 0px;
   padding: 0px;
 }
+a { text-decoration: none; color: inherit; }

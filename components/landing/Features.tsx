@@ -110,7 +110,7 @@ const FeaturesSection = () => {
                     <div className="col-lg-7 creatorshelf-showcase-area" onMouseMove={handleMouseMove}>
 
                         {/* 1. Interactive Particles Layer */}
-                        <NoiseParticles color="#ed4c37" />
+                      <NoiseParticles  />
 
                         {/* 2. Static Noise Layer */}
                         <div className="creatorshelf-noise-overlay" />

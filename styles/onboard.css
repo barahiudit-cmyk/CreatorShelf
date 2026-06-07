@@ -94,7 +94,7 @@
 
 .creatorshelf-category-card.selected {
   border-color: var(--primary);
-  background: rgba(239, 80, 56, 0.05);
+  background: var(--primary-fade);
   color: var(--primary);
 }
 
@@ -138,7 +138,7 @@
 
 .creatorshelf-platform-pill.connected {
   border-color: var(--primary);
-  background: rgba(239, 80, 56, 0.05);
+  background: var(--primary-fade)
 }
 
 /* Form Fields (Step 04) */
@@ -150,7 +150,7 @@
   display: block;
   font-family: 'JetBrains Mono', monospace;
   font-size: 10px;
-  color: #ef5038;
+  color: var(--primary);
   margin-bottom: 8px;
   text-transform: uppercase;
 }
