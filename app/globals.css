@@ -10,7 +10,7 @@
   --border: rgba(255, 255, 255, 0.1);
   --bg-color: black;
   --black-fade: rgba(0, 0, 0, 0.588);
-  --primary: #6c17a1;
+  --primary: #a13517;
   --primary-border: color-mix(in srgb, var(--primary) 24%, transparent);
   --primary-fade: color-mix(in srgb, var(--primary) 4%, transparent);
   --primary-hover: #ff6b47;
