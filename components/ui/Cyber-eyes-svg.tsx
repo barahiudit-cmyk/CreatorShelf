@@ -49,17 +49,17 @@ const Cybereye = () => {
                                 cx="240"
                                 cy="240"
                                 r={r}
-                                stroke="#F0EDE6"
+                                stroke="var(--eye-stroke)"
                                 strokeWidth="0.5"
                                 fill="none"
                             />
                         ))}
 
                         {/* Cross Lines */}
-                        <line x1="240" y1="0" x2="240" y2="480" stroke="#F0EDE6" strokeWidth="0.3" />
-                        <line x1="0" y1="240" x2="480" y2="240" stroke="#F0EDE6" strokeWidth="0.3" />
-                        <line x1="70" y1="70" x2="410" y2="410" stroke="#F0EDE6" strokeWidth="0.3" />
-                        <line x1="410" y1="70" x2="70" y2="410" stroke="#F0EDE6" strokeWidth="0.3" />
+                        <line x1="240" y1="0" x2="240" y2="480" stroke="var(--eye-stroke)" strokeWidth="0.3" />
+                        <line x1="0" y1="240" x2="480" y2="240" stroke="var(--eye-stroke)" strokeWidth="0.3" />
+                        <line x1="70" y1="70" x2="410" y2="410" stroke="var(--eye-stroke)" strokeWidth="0.3" />
+                        <line x1="410" y1="70" x2="70" y2="410" stroke="var(--eye-stroke)" strokeWidth="0.3" />
 
                         {/* Eye Shape */}
                         <g
@@ -71,7 +71,7 @@ const Cybereye = () => {
                         >
                             <path
                                 d="M120 240 C120 240 180 170 240 170 C300 170 360 240 360 240 C360 240 300 310 240 310 C180 310 120 240 120 240Z"
-                                stroke="#F0EDE6"
+                                stroke="var(--eye-stroke)"
                                 strokeWidth="1"
                                 fill="none"
                             />
@@ -80,14 +80,14 @@ const Cybereye = () => {
                                 cx="240"
                                 cy="240"
                                 r="35"
-                                stroke="#F0EDE6"
+                                stroke="var(--eye-stroke)"
                                 strokeWidth="1"
                                 fill="none"
                             />
                         </g>
 
                         {/* Scanner Corners */}
-                        <g stroke="#F0EDE6" strokeWidth="0.6">
+                        <g stroke="var(--eye-stroke)" strokeWidth="0.6">
                             <polyline points="40,70 40,40 70,40" fill="none" />
                             <polyline points="410,40 440,40 440,70" fill="none" />
                             <polyline points="440,410 440,440 410,440" fill="none" />
@@ -96,7 +96,7 @@ const Cybereye = () => {
 
                         {/* Dashed Telemetry */}
                         <g
-                            stroke="#F0EDE6"
+                            stroke="var(--eye-stroke)"
                             strokeWidth="0.25"
                             strokeDasharray="3,6"
                         >
@@ -107,7 +107,7 @@ const Cybereye = () => {
                         </g>
 
                         {/* Dots */}
-                        <g fill="#F0EDE6" opacity="0.5">
+                        <g fill="var(--eye-stroke)" opacity="0.5">
                             <circle cx="110" cy="90" r="3" />
                             <circle cx="370" cy="90" r="3" />
                             <circle cx="110" cy="390" r="3" />
@@ -117,7 +117,7 @@ const Cybereye = () => {
                         {/* Sector Glow */}
                         <path
                             d="M240 240 L240 60 A180 180 0 0 1 380 145 Z"
-                            fill="#F0EDE6"
+                            fill="var(--eye-stroke)"
                             opacity="0.04"
                         />
 
@@ -126,7 +126,7 @@ const Cybereye = () => {
                             x="240"
                             y="478"
                             textAnchor="middle"
-                            fill="#F0EDE6"
+                            fill="var(--eye-stroke)"
                             opacity="0.6"
                             fontFamily="monospace"
                             fontSize="5"
@@ -141,7 +141,7 @@ const Cybereye = () => {
                         cx={240 + mouse.x}
                         cy={240 + mouse.y}
                         r="14"
-                        fill="#ED462D"
+                        fill="var(--eye-pupil)"
                         className="creatorshelf-pupil"
                     />
                 </svg>
